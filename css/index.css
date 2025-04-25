@@ -923,7 +923,7 @@
         position: absolute;
         height: 100%;
         width: 0%;
-        background: #000;
+        background: #fff;
         opacity: 1;
         top: 0;
         left: 0;
@@ -933,7 +933,7 @@
     }
 
     #hero-143 .cs-button-solid:hover {
-        color: #fff;
+        color: var(--primary);
     }
 
     #hero-143 .cs-button-solid:hover:before {
@@ -944,7 +944,7 @@
 /* Desktop - 1300px (To make image background parallax) */
 @media only screen and (min-width: 81.25rem) {
     #hero-143 {
-        background: url("/images/hero_bg_img.webp");
+        background: url("../images/hero_bg_img.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1161,12 +1161,16 @@
         box-sizing: border-box;
     }
 
+    #content-1637 .cs-button-solid:hover {
+        color: var(--primary);
+    }
+
     #content-1637 .cs-button-solid:before {
         content: '';
         position: absolute;
         height: 100%;
         width: 0%;
-        background: #000;
+        background: #fff;
         opacity: 1;
         top: 0;
         left: 0;
@@ -1746,6 +1750,7 @@
     #why-choose-289 .cs-icon.default {
         display: block;
     }
+
     #why-choose-289 .cs-item:hover .cs-icon.default {
         display: none;
     }
@@ -1753,6 +1758,7 @@
     #why-choose-289 .cs-icon.hover {
         display: none;
     }
+
     #why-choose-289 .cs-item:hover .cs-icon.hover {
         display: block;
     }

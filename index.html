@@ -66,22 +66,10 @@
                                 About
                             </a>
                         </li>
-                        <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                        <li class="cs-li cs-dropdown" tabindex="0">
-                            <span class="cs-li-link">
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
                                 Services
-                                <img class="cs-drop-icon"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
-                                    alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                            </span>
-                            <ul class="cs-drop-ul">
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">Registration</a>
-                                </li>
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">Our Classes</a>
-                                </li>
-                            </ul>
+                            </a>
                         </li>
                         <li class="cs-li">
                             <a href="" class="cs-li-link">
@@ -114,8 +102,8 @@
         <picture class="cs-background">
             <source media="(max-width: 600px)" srcset="./images/hero_bg_img.webp">
             <source media="(min-width: 601px)" srcset="./images/hero_bg_img.webp">
-            <img loading="lazy" decoding="async" src="./images/hero_bg_img.webp"
-                alt="dallas skyline" width="2250" height="1500" aria-hidden="true">
+            <img loading="lazy" decoding="async" src="./images/hero_bg_img.webp" alt="dallas skyline" width="2250"
+                height="1500" aria-hidden="true">
         </picture>
     </section>
 
@@ -223,11 +211,9 @@
                 </li>
                 <li class="cs-item">
                     <img class="cs-icon default" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/sheild.svg" alt="icon"
-                        width="40" height="48">
+                        src="./images/sheild.svg" alt="icon" width="40" height="48">
                     <img class="cs-icon hover" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/shield_white.svg" alt="icon"
-                        width="40" height="48">
+                        src="./images/shield_white.svg" alt="icon" width="40" height="48">
                     <h3 class="cs-h3">Reliable Asset Protection</h3>
                     <p class="cs-item-text">
                         From tenant screening to legal compliance, we protect your property and ensure long-term
@@ -236,11 +222,9 @@
                 </li>
                 <li class="cs-item">
                     <img class="cs-icon default" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/call.svg" alt="icon" width="48"
-                        height="48">
+                        src="./images/call.svg" alt="icon" width="48" height="48">
                     <img class="cs-icon hover" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/call_white.svg" alt="icon" width="48"
-                        height="48">
+                        src="./images/call_white.svg" alt="icon" width="48" height="48">
                     <h3 class="cs-h3">24/7 Local Support</h3>
                     <p class="cs-item-text">
                         Our Dallas-based team is always available to assist owners and tenants with fast, dependable
@@ -260,7 +244,7 @@
         <div id="cta-1185">
             <div class="cs-content">
                 <h2 class="cs-title">Subscribe For More Info</h2>
-                <form class="cs-form" name="Contact Form" method="post">
+                <form class="cs-form" name="Contact Form" method="post" id="subscribe-form">
                     <input class="cs-input" type="email" id="cs-email-1185" name="find-us" placeholder="Email Address">
                     <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
                 </form>
@@ -294,6 +278,9 @@
                     <a class="cs-nav-link" href="">Services</a>
                 </li>
                 <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Blog</a>
+                </li>
+                <li class="cs-nav-li">
                     <a class="cs-nav-link" href="">Contact</a>
                 </li>
             </ul>
@@ -310,8 +297,7 @@
                 <li class="cs-nav-li">
                     <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
                         alt="email" width="24" height="24">
-                    <a class="cs-nav-link cs-email"
-                        href="mailto:info@europaluxuryproperties.com">info@europaluxuryproperties.com</a>
+                    <a class="cs-nav-link cs-email" href="mailto:info@europalp.com">info@europalp.com</a>
                 </li>
                 <li class="cs-nav-li">
                     <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
@@ -347,9 +333,44 @@
         </picture>
     </footer>
 
-
-
+    <!-- Custom JS -->
     <script src="./js/index.js"></script>
+    <!-- Brevo Integration -->
+    <script>
+        document.getElementById('subscribe-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('cs-email-1185').value;
+
+            const data = {
+                email: email,
+                listIds: [4],
+                updateEnabled: true
+            };
+
+            try {
+                const response = await fetch('https://api.brevo.com/v3/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'accept': 'application/json',
+                        'api-key': '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',
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert("Thanks for subscribing!");
+                } else {
+                    const errorData = await response.json();
+                    alert("Error: " + errorData.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred.");
+            }
+        });
+    </script>
 </body>
 
 </html>
