@@ -772,7 +772,7 @@
         /* Centers button */
         text-align: center;
         /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 18.75rem) 1rem 0;
+        padding: clamp(12rem, 25.95vw, 15.75rem) 1rem 0;
         /* 130px - 450px */
         padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
         position: relative;
