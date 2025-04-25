@@ -349,7 +349,7 @@
             };
 
             try {
-                const response = await fetch('./js/subscribe.js', {
+                const response = await fetch('/.netlify/functions/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
