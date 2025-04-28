@@ -42,7 +42,8 @@
             <!--Nav Logo-->
             <!--Logo is turned white in the css with a filter on dark mode-->
             <a href="/index.html" class="cs-logo" aria-label="back to home">
-                <img src="./images/europalp_logo.webp" alt="logo" aria-hidden="true" decoding="async">
+                <img src="./images/europalp_logo-200x60.webp" alt="Europa Luxury Properties logo" decoding="async"
+                    width="200" height="60">
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
@@ -259,7 +260,7 @@
                         <source media="(max-width: 600px)" srcset="./images/lu_img.webp">
                         <!--Tablet and above Image-->
                         <source media="(min-width: 601px)" srcset="./images/lu_img.webp">
-                        <img loading="lazy" decoding="async" src="./images/lu_img.webp" alt="person" width="305"
+                        <img loading="lazy" decoding="async" src="./images/lu_img.webp" alt="person" width="306"
                             height="407">
                     </picture>
                     <div class="cs-info">
@@ -273,7 +274,7 @@
                         <source media="(max-width: 600px)" srcset="./images/fil_img.webp">
                         <!--Tablet and above Image-->
                         <source media="(min-width: 601px)" srcset="./images/fil_img.webp">
-                        <img loading="lazy" decoding="async" src="./images/fil_img.webp" alt="person" width="305"
+                        <img loading="lazy" decoding="async" src="./images/fil_img.webp" alt="person" width="306"
                             height="407">
                     </picture>
                     <div class="cs-info">
@@ -304,8 +305,7 @@
             <div class="cs-logo-group">
                 <a aria-label="go back to home" class="cs-logo" href="/index.html">
                     <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/europalp_logo_white-197x43.webp" alt="Europa Luxury Properties logo" width="197"
-                        height="43">
+                        src="./images/europalp_logo_white.webp" alt="logo" width="197" height="43">
                 </a>
                 <p class="cs-text">
                     Europa Luxury Properties provides full-service property management and real estate solutions in
@@ -340,18 +340,15 @@
                     <span class="cs-header">Contact</span>
                 </li>
                 <li class="cs-nav-li">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
-                        alt="phone" width="24" height="24">
+                    <img class="cs-icon" src="./images/phone-stroke.svg" alt="phone" width="24" height="24">
                     <a class="cs-nav-link cs-phone" href="tel:+18885551234">+1 (888) 555-1234</a>
                 </li>
                 <li class="cs-nav-li">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
-                        alt="email" width="24" height="24">
+                    <img class="cs-icon" src="./images/email-stroke.svg" alt="email" width="24" height="24">
                     <a class="cs-nav-link cs-email" href="mailto:info@europalp.com">info@europalp.com</a>
                 </li>
                 <li class="cs-nav-li">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
-                        alt="pin" width="24" height="24">
+                    <img class="cs-icon" src="./images/pin-stroke.svg" alt="pin" width="24" height="24">
                     <a class="cs-nav-link cs-address" href="https://www.google.com/maps/place/Dallas,+TX"
                         target="_blank" rel="noopener">
                         Dallas, TX 75201<br>Serving All Surrounding Counties
@@ -372,10 +369,17 @@
         </div>
         <!--Background Image-->
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="./images/footer_bg_img.webp">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="./images/footer_bg_img.webp">
+            <!-- Mobile (small phones) -->
+            <source media="(max-width: 600px)" srcset="./images/footer_bg_img-360w.webp" type="image/webp">
+
+            <!-- Tablet and small desktop -->
+            <source media="(min-width: 601px) and (max-width: 1024px)" srcset="./images/footer_bg_img-720w.webp"
+                type="image/webp">
+
+            <!-- Large desktop -->
+            <source media="(min-width: 1025px)" srcset="./images/footer_bg_img-1280w.webp" type="image/webp">
+
+            <!-- Fallback image -->
             <img loading="lazy" decoding="async" src="./images/footer_bg_img.webp" alt="wheels" width="1280"
                 height="568">
         </picture>
