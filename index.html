@@ -44,7 +44,8 @@
             <!--Nav Logo-->
             <!--Logo is turned white in the css with a filter on dark mode-->
             <a href="/index.html" class="cs-logo" aria-label="back to home">
-                <img src="./images/europalp_logo.webp" alt="logo" aria-hidden="true" decoding="async">
+                <img src="./images/europalp_logo-optimized.webp" alt="Europa Luxury Properties logo" decoding="async"
+                    width="200" height="60">
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
@@ -103,9 +104,12 @@
 
         <!-- Background Image -->
         <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="./images/hero_bg_img.webp">
-            <source media="(min-width: 601px)" srcset="./images/hero_bg_img.webp">
-            <img decoding="async" src="./images/hero_bg_img.webp" alt="dallas skyline" width="2250" height="1500"
+            <source srcset="
+                    ./images/hero_bg_img-360w.webp 360w,
+                    ./images/hero_bg_img-720w.webp 720w,
+                    ./images/hero_bg_img.webp 2250w
+                " sizes="(max-width: 600px) 360px, (max-width: 1200px) 720px, 2250px" type="image/webp">
+            <img decoding="async" src="./images/hero_bg_img-360w.webp" alt="dallas skyline" width="2250" height="1500"
                 aria-hidden="true">
         </picture>
     </section>
@@ -180,7 +184,7 @@
                         maximum returns, and seamless experiences. We combine local expertise with premium service to
                         elevate real estate standards in North Texas.
                     </p>
-                    <a href="/about.html" class="cs-button-solid">Learn More</a>
+                    <a href="/about.html" class="cs-button-solid">Read More About Us</a>
                 </div>
             </div>
         </div>
@@ -325,10 +329,17 @@
         </div>
         <!--Background Image-->
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="./images/footer_bg_img.webp">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="./images/footer_bg_img.webp">
+            <!-- Mobile (small phones) -->
+            <source media="(max-width: 600px)" srcset="./images/footer_bg_img-360w.webp" type="image/webp">
+
+            <!-- Tablet and small desktop -->
+            <source media="(min-width: 601px) and (max-width: 1024px)" srcset="./images/footer_bg_img-720w.webp"
+                type="image/webp">
+
+            <!-- Large desktop -->
+            <source media="(min-width: 1025px)" srcset="./images/footer_bg_img-1280w.webp" type="image/webp">
+
+            <!-- Fallback image -->
             <img loading="lazy" decoding="async" src="./images/footer_bg_img.webp" alt="wheels" width="1280"
                 height="568">
         </picture>
