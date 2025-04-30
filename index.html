@@ -7,14 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="description"
-        content="Europa Luxury Properties provides expert property management and luxury real estate services in Dallas County and surrounding Texas areas. Discover full-service solutions for residential, commercial, and investment properties." />
+        content="Europa Luxury Properties offers expert property management and luxury real estate services across Dallas County and nearby Texas areas for all property types." />
     <meta name="keywords"
         content="Dallas property management, luxury real estate Dallas, Europa Luxury Properties, property managers Texas, real estate services Dallas County, rental management Texas" />
     <meta name="author" content="Europa Luxury Properties" />
 
     <!-- Title -->
-    <title>Europa Luxury Properties | Dallas Property Management & Luxury Real Estate</title>
+    <title>Europa Luxury Properties | Dallas County Property Management</title>
     <link rel="canonical" href="https://europalp.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Europa Luxury Properties | Premier Dallas Property Management" />
@@ -22,18 +25,49 @@
         content="Top-rated property management and luxury real estate solutions across Dallas County and North Texas. Trusted by owners, tenants, and investors." />
     <meta property="og:url" content="https://europalp.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://europalp.com/images/og-image.jpg" />
+    <meta property="og:image" content="https://europalp.com/images/europalp_logo-200x60.webp" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Europa Luxury Properties | Dallas Luxury Property Experts" />
     <meta name="twitter:description"
         content="Explore Dallas real estate and property management done right. Residential, commercial, and luxury property services from a trusted local team." />
-    <meta name="twitter:image" content="https://europalp.com/images/twitter-card.jpg" />
+    <meta name="twitter:image" content="https://europalp.com/images/europalp_logo-200x60.webp" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/core.css">
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "RealEstateAgent",
+          "name": "Europa Luxury Properties",
+          "url": "https://europalp.com/",
+          "logo": "https://europalp.com/images/europalp_logo-200x60.webp",
+          "image": "https://europalp.com/images/europalp_logo-200x60.webp",
+          "description": "Europa Luxury Properties offers expert property management and luxury real estate services across Dallas County and surrounding Texas areas.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dallas",
+            "addressRegion": "TX",
+            "postalCode": "75201",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-888-555-1234",
+            "contactType": "Customer Service",
+            "email": "info@europalp.com"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Dallas County and surrounding counties in Texas"
+          }
+        }
+        </script>
+        
 </head>
 
 
@@ -250,6 +284,7 @@
             <div class="cs-content">
                 <h2 class="cs-title">Subscribe For More Info</h2>
                 <form class="cs-form" name="Contact Form" method="post" id="subscribe-form">
+                    <label for="find-us" hidden></label>
                     <input class="cs-input" type="email" id="cs-email-1185" name="find-us" placeholder="Email Address">
                     <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
                 </form>
