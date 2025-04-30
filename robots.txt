@@ -1,0 +1,12 @@
+# robots.txt for https://europalp.com
+
+User-agent: *
+# Allow everything except specific directories or files - NA at the moment
+
+# Allow CSS, JS, images (Googlebot needs these for proper rendering)
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://europalp.com/sitemap.xml

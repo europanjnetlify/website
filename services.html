@@ -7,36 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="description"
-        content="Europa Luxury Properties offers expert property management and luxury real estate services across Dallas County and nearby Texas areas for all property types." />
+        content="Explore the professional services offered by Europa Luxury Properties — including property management, luxury leasing, and real estate services across Dallas County and surrounding areas in Texas." />
     <meta name="keywords"
-        content="Dallas property management, luxury real estate Dallas, Europa Luxury Properties, property managers Texas, real estate services Dallas County, rental management Texas" />
+        content="Dallas property management services, luxury leasing Dallas, property maintenance TX, real estate solutions Dallas County, Texas property managers, Europa Luxury Properties services" />
     <meta name="author" content="Europa Luxury Properties" />
 
     <!-- Title -->
-    <title>Europa Luxury Properties | Dallas County Property Management</title>
-    <link rel="canonical" href="https://europalp.com/" />
+    <title>Our Services | Europa Luxury Properties | Dallas Property Management & Real Estate</title>
+    <link rel="canonical" href="https://europalp.com/services" />
 
     <!-- Favicon -->
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Europa Luxury Properties | Premier Dallas Property Management" />
+    <meta property="og:title" content="Our Services | Europa Luxury Properties | Dallas Property Experts" />
     <meta property="og:description"
-        content="Top-rated property management and luxury real estate solutions across Dallas County and North Texas. Trusted by owners, tenants, and investors." />
-    <meta property="og:url" content="https://europalp.com/" />
+        content="Discover the full range of services from Europa Luxury Properties — property management, luxury rentals, and expert real estate support in Dallas and surrounding counties." />
+    <meta property="og:url" content="https://europalp.com/services" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://europalp.com/images/europalp_logo-200x60.webp" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Europa Luxury Properties | Dallas Luxury Property Experts" />
+    <meta name="twitter:title" content="Our Services | Europa Luxury Properties in Dallas, TX" />
     <meta name="twitter:description"
-        content="Explore Dallas real estate and property management done right. Residential, commercial, and luxury property services from a trusted local team." />
+        content="View our expert services in real estate and property management across Dallas County and surrounding Texas communities." />
     <meta name="twitter:image" content="https://europalp.com/images/europalp_logo-200x60.webp" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/core.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/services.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -44,10 +44,10 @@
           "@context": "https://schema.org",
           "@type": "RealEstateAgent",
           "name": "Europa Luxury Properties",
-          "url": "https://europalp.com/",
+          "url": "https://europalp.com/services",
           "logo": "https://europalp.com/images/europalp_logo-200x60.webp",
           "image": "https://europalp.com/images/europalp_logo-200x60.webp",
-          "description": "Europa Luxury Properties offers expert property management and luxury real estate services across Dallas County and surrounding Texas areas.",
+          "description": "Europa Luxury Properties provides professional property management, real estate leasing, and luxury property services throughout Dallas County, Texas and surrounding areas.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dallas",
@@ -61,14 +61,15 @@
             "contactType": "Customer Service",
             "email": "info@europalp.com"
           },
-          "areaServed": {
-            "@type": "Place",
-            "name": "Dallas County and surrounding counties in Texas"
-          }
+          "areaServed": [
+            { "@type": "Place", "name": "Dallas County" },
+            { "@type": "Place", "name": "Tarrant County" },
+            { "@type": "Place", "name": "Collin County" },
+            { "@type": "Place", "name": "Denton County" }
+          ]
         }
-        </script>
+    </script>
 </head>
-
 
 <body>
     <!-- Navigation -->
@@ -94,7 +95,7 @@
                 <div class="cs-ul-wrapper">
                     <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                         <li class="cs-li">
-                            <a href="/index.html" class="cs-li-link cs-active">
+                            <a href="/index.html" class="cs-li-link">
                                 Home
                             </a>
                         </li>
@@ -104,7 +105,7 @@
                             </a>
                         </li>
                         <li class="cs-li">
-                            <a href="/services.html" class="cs-li-link">
+                            <a href="/services.html" class="cs-li-link cs-active">
                                 Services
                             </a>
                         </li>
@@ -124,155 +125,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero-143">
+    <!-- Banner -->
+    <div id="banner-712">
         <div class="cs-container">
-            <h1 class="cs-title">Luxury Property Management</h1>
-            <p class="cs-text">
-                Europa Luxury Properties provides expert management for residential, commercial, and luxury estates
-                across Dallas County and surrounding Texas areas. Dependable service. Exceptional results.
-            </p>
-            <a href="/contact.html" class="cs-button-solid">Contact Us</a>
+            <span class="cs-int-title">Services</span>
         </div>
-
-        <!-- Background Image -->
+        <!--Background Image-->
         <picture class="cs-background">
-            <source srcset="
-                    ./images/hero_bg_img-360w.webp 360w,
-                    ./images/hero_bg_img-720w.webp 720w,
-                    ./images/hero_bg_img.webp 2250w
-                " sizes="(max-width: 600px) 360px, (max-width: 1200px) 720px, 2250px" type="image/webp">
-            <img decoding="async" src="./images/hero_bg_img-360w.webp" alt="dallas skyline" width="2250" height="1500"
-                aria-hidden="true">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="./images/banner_bg.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="./images/banner_bg.webp">
+            <img loading="lazy" decoding="async" src="./images/banner_bg.webp" alt="city skyline background"
+                width="1280" height="568" aria-hidden="true">
         </picture>
-    </section>
-
-    <!-- Services -->
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="./images/toolbox.svg" alt="icon" width="52" height="52"
-                        aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Full-Service Property Management</h2>
-                <p class="cs-text">
-                    From tenant placement to rent collection and maintenance, we handle every aspect of managing your
-                    Dallas-area property.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="./images/buildings.svg" alt="icon" width="52" height="52"
-                        aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Luxury Real Estate Leasing</h2>
-                <p class="cs-text">
-                    We specialize in leasing high-end residential and commercial properties across Dallas County and
-                    surrounding areas.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="./images/gear.svg" alt="icon" width="52" height="52"
-                        aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">24/7 Maintenance Coordination</h2>
-                <p class="cs-text">
-                    Fast, professional maintenance response ensures tenant satisfaction and protects your investment.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="./images/user.svg" alt="icon" width="52" height="52"
-                        aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Investor & Owner Services</h2>
-                <p class="cs-text">
-                    Custom solutions for real estate investors and owners including portfolio management and property
-                    marketing.
-                </p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Content -->
-    <section id="content-1637">
-        <div class="cs-container">
-            <div class="cs-content">
-                <div class="cs-flex">
-                    <span class="cs-topper">About Us</span>
-                    <h2 class="cs-title">Luxury Property Management & Real Estate Services in Dallas and Beyond</h2>
-                </div>
-                <div class="cs-flex">
-                    <h3 class="cs-h3">
-                        Trusted by Homeowners, Investors, and Tenants Across North Texas
-                    </h3>
-                    <p class="cs-text">
-                        At Europa Luxury Properties, we specialize in managing, marketing, and maintaining high-end
-                        residential and commercial properties across Dallas County and surrounding areas. Whether you're
-                        a property owner, investor, or tenant, our full-service approach ensures exceptional care,
-                        maximum returns, and seamless experiences. We combine local expertise with premium service to
-                        elevate real estate standards in North Texas.
-                    </p>
-                    <a href="/about.html" class="cs-button-solid">Read More About Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="why-choose-289">
-        <div class="cs-container">
-            <div class="cs-content">
-                <div class="cs-flex">
-                    <span class="cs-topper">Our Process</span>
-                    <h2 class="cs-title">Why Choose Europa Luxury Properties in Dallas</h2>
-                </div>
-                <p class="cs-text">
-                    We’re a premier property management company serving Dallas and surrounding areas. Our team of local
-                    experts, investors, and service professionals brings properties to life, maximizes returns, and
-                    ensures your investments stand out in a competitive market.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <img class="cs-icon default" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/award.svg" alt="icon" width="48" height="48">
-                    <img class="cs-icon hover" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/award_white.svg" alt="icon" width="48" height="48">
-                    <h3 class="cs-h3">High Client Satisfaction</h3>
-                    <p class="cs-item-text">
-                        With a 99% satisfaction rate, we’ve helped owners across Dallas County achieve steady income and
-                        stress-free management.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon default" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/sheild.svg" alt="icon" width="40" height="48">
-                    <img class="cs-icon hover" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/shield_white.svg" alt="icon" width="40" height="48">
-                    <h3 class="cs-h3">Reliable Asset Protection</h3>
-                    <p class="cs-item-text">
-                        From tenant screening to legal compliance, we protect your property and ensure long-term
-                        performance and stability.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon default" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/call.svg" alt="icon" width="48" height="48">
-                    <img class="cs-icon hover" aria-hidden="true" loading="lazy" decoding="async"
-                        src="./images/call_white.svg" alt="icon" width="48" height="48">
-                    <h3 class="cs-h3">24/7 Local Support</h3>
-                    <p class="cs-item-text">
-                        Our Dallas-based team is always available to assist owners and tenants with fast, dependable
-                        service and updates.
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
+    </div>
 
     <!-- Footer -->
     <footer id="cs-footer-1185">
@@ -283,7 +150,6 @@
             <div class="cs-content">
                 <h2 class="cs-title">Subscribe For More Info</h2>
                 <form class="cs-form" name="Contact Form" method="post" id="subscribe-form">
-                    <label for="find-us" hidden></label>
                     <input class="cs-input" type="email" id="cs-email-1185" name="find-us" placeholder="Email Address">
                     <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
                 </form>
