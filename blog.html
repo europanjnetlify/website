@@ -123,12 +123,16 @@
         </div>
         <!--Background Image-->
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="./images/banner_bg.webp">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="./images/banner_bg.webp">
+            <!-- Mobile (small phones) -->
+            <source media="(max-width: 600px)" srcset="./images/banner_bg-360w.webp" type="image/webp">
+            <!-- Tablet and small desktop -->
+            <source media="(min-width: 601px) and (max-width: 1024px)" srcset="./images/banner_bg-720w.webp"
+                type="image/webp">
+            <!-- Large desktop -->
+            <source media="(min-width: 1025px)" srcset="./images/banner_bg-1280w.webp" type="image/webp">
+            <!-- Fallback image -->
             <img loading="lazy" decoding="async" src="./images/banner_bg.webp" alt="city skyline background"
-                width="1280" height="568" aria-hidden="true">
+                width="1920" height="634" aria-hidden="true">
         </picture>
     </div>
 
