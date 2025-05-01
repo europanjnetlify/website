@@ -158,8 +158,8 @@
             <!-- Large desktop -->
             <source media="(min-width: 1025px)" srcset="./images/banner_bg-1280w.webp" type="image/webp">
             <!-- Fallback image -->
-            <img decoding="async" src="./images/banner_bg.webp" alt="city skyline background"
-                width="1920" height="634" aria-hidden="true">
+            <img decoding="async" src="./images/banner_bg.webp" alt="city skyline background" width="1920" height="634"
+                aria-hidden="true">
         </picture>
     </div>
 
@@ -277,12 +277,18 @@
                 height="710" aria-hidden="true" width="690">
         </div>
         <picture class="cs-picture">
-            <source media="(min-width: 1024px)" srcset="./images/about_onpage_img.webp">
-            <source media="(min-width: 601px)" srcset="./images/about_onpage_img.webp">
-            <source media="(max-width: 600px)" srcset="./images/about_onpage_img.webp">
-            <img aria-hidden="true" loading="lazy" decoding="async" src="./images/about_onpage_img.webp" alt="meeting"
-                width="1280" height="620">
+            <!-- Mobile (small phones) -->
+            <source media="(max-width: 600px)" srcset="./images/about_onpage_img-360w.webp" type="image/webp">
+            <!-- Tablet and small desktops -->
+            <source media="(min-width: 601px) and (max-width: 1023px)" srcset="./images/about_onpage_img-720w.webp"
+                type="image/webp">
+            <!-- Large desktops -->
+            <source media="(min-width: 1024px)" srcset="./images/about_onpage_img-1280w.webp" type="image/webp">
+            <!-- Fallback -->
+            <img aria-hidden="true" loading="lazy" decoding="async" src="./images/about_onpage_img-1280w.webp"
+                alt="meeting" width="1280" height="620">
         </picture>
+
     </section>
 
 
