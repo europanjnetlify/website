@@ -66,7 +66,39 @@
             "name": "Dallas County and surrounding counties in Texas"
           }
         }
-        </script>
+    </script>
+    
+    <!-- Google Analytics - Run on mouse move or scroll (who cares about bounce rate)-->
+    <script>
+        /**
+         * Scottsweb.dev
+         * Load google analytics after a user interaction (scroll or mousemovement).
+         * This method may not gather all analytics such as bounces, but it will remove 
+         * google analytics from the pagespeed score
+         */
+
+        let analytics_loaded = false;
+        let analytics_script_id = 'G-M7620RPN05';
+
+        function swd_load_analytics() {
+            if (!analytics_loaded) {
+                let analytics_script = document.createElement('script');
+                analytics_script.src = 'https://www.googletagmanager.com/gtag/js?id=' + analytics_script_id;
+                analytics_script.onload = function () {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() { dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', analytics_script_id);
+                };
+                document.head.appendChild(analytics_script);
+                analytics_loaded = true;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', swd_load_analytics);
+            window.addEventListener('mousemove', swd_load_analytics);
+        });
+    </script>
 </head>
 
 
