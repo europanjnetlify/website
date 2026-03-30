@@ -1,0 +1,105 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/blog/uploads"
+public_folder: "/images/blog/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      # ─── REQUIRED ────────────────────────────────────────────────
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "⭐ REQUIRED — Main heading of your post."
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        hint: "⭐ REQUIRED — Publication date used for sorting."
+
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "text"
+        hint: "⭐ REQUIRED — Short summary shown on blog index card. Keep under 160 characters."
+
+      - label: "Cover Image"
+        name: "cover_image"
+        widget: "image"
+        hint: "⭐ REQUIRED — Shown at the top of the post and on the blog index card."
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "⭐ REQUIRED — The full content of your post."
+
+      # ─── SEO ─────────────────────────────────────────────────────
+      - label: "SEO Title"
+        name: "seo_title"
+        widget: "string"
+        required: false
+        hint: "🔴 Overrides post title in Google. Keep under 60 chars. Falls back to Title if blank."
+
+      - label: "SEO Description"
+        name: "seo_description"
+        widget: "text"
+        required: false
+        hint: "🔴 Google snippet. Keep under 160 chars. Falls back to Excerpt if blank."
+
+      - label: "Author Name"
+        name: "author_name"
+        widget: "string"
+        default: "Europa Luxury Properties"
+        required: false
+        hint: "🔴 Defaults to Europa Luxury Properties."
+
+      - label: "Last Modified"
+        name: "last_modified"
+        widget: "datetime"
+        required: false
+        hint: "🔴 Update every time you edit a post. Leave blank on first publish."
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "🔴 Add 3–6 tags e.g. property management, Dallas, luxury rentals."
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: false
+        options:
+          - "Property Management"
+          - "Market Trends"
+          - "Luxury Living"
+          - "Investor Insights"
+          - "Tips & Guides"
+          - "Dallas Real Estate"
+          - "Tenant Resources"
+        hint: "🟡 Groups posts by topic."
+
+      - label: "Reading Time (mins)"
+        name: "reading_time"
+        widget: "number"
+        required: false
+        hint: "🟡 Rough guide: 200 words per minute."
+
+      - label: "Featured Post"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "🟢 Pins this post to the top of the blog index."
+
+      - label: "No Index"
+        name: "no_index"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "⚪ Hides post from Google. Only use for drafts."
