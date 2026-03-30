@@ -24,11 +24,8 @@
     #cs-navigation {
         width: 94%;
         max-width: 80rem;
-        /* prevents padding from affecting height and width */
         box-sizing: border-box;
-        /* 12px - 24px */
         padding: clamp(0.75rem, 2vw, 1.5rem);
-        /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
         position: fixed;
         top: 2rem;
@@ -39,14 +36,12 @@
     }
 
     #cs-navigation:before {
-        /* background color */
         content: "";
         width: 100%;
         height: 100%;
         background: #fff;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
         opacity: 1;
-        /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
         display: block;
         position: absolute;
@@ -87,7 +82,6 @@
         max-width: 12.5rem;
         height: 100%;
         margin: 0 auto 0 0;
-        /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: 0;
         display: flex;
@@ -99,7 +93,6 @@
     #cs-navigation .cs-logo img {
         width: 100%;
         height: 100%;
-        /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
     }
 
@@ -119,7 +112,6 @@
     }
 
     #cs-navigation .cs-nav {
-        /* sends it to the right in the 3rd position */
         order: 3;
     }
 
@@ -169,7 +161,6 @@
     }
 
     #cs-navigation .cs-box {
-        /* 24px - 28px */
         width: clamp(1.5rem, 2vw, 1.75rem);
         height: 1rem;
         position: relative;
@@ -246,65 +237,25 @@
         width: 100%;
         margin-right: 0;
         opacity: 0;
-        /* transition from these values */
-        transform: translateY(-70/16rem);
+        transform: translateY(-4.375rem);
         transition: transform 0.6s, opacity 0.9s;
     }
 
-    #cs-navigation .cs-li:nth-of-type(1) {
-        transition-delay: 0.05s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(2) {
-        transition-delay: 0.1s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(3) {
-        transition-delay: 0.15s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(4) {
-        transition-delay: 0.2s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(5) {
-        transition-delay: 0.25s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(6) {
-        transition-delay: 0.3s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(7) {
-        transition-delay: 0.35s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(8) {
-        transition-delay: 0.4s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(9) {
-        transition-delay: 0.45s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(10) {
-        transition-delay: 0.5s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(11) {
-        transition-delay: 0.55s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(12) {
-        transition-delay: 0.6s;
-    }
-
-    #cs-navigation .cs-li:nth-of-type(13) {
-        transition-delay: 0.65s;
-    }
+    #cs-navigation .cs-li:nth-of-type(1) { transition-delay: 0.05s; }
+    #cs-navigation .cs-li:nth-of-type(2) { transition-delay: 0.1s; }
+    #cs-navigation .cs-li:nth-of-type(3) { transition-delay: 0.15s; }
+    #cs-navigation .cs-li:nth-of-type(4) { transition-delay: 0.2s; }
+    #cs-navigation .cs-li:nth-of-type(5) { transition-delay: 0.25s; }
+    #cs-navigation .cs-li:nth-of-type(6) { transition-delay: 0.3s; }
+    #cs-navigation .cs-li:nth-of-type(7) { transition-delay: 0.35s; }
+    #cs-navigation .cs-li:nth-of-type(8) { transition-delay: 0.4s; }
+    #cs-navigation .cs-li:nth-of-type(9) { transition-delay: 0.45s; }
+    #cs-navigation .cs-li:nth-of-type(10) { transition-delay: 0.5s; }
+    #cs-navigation .cs-li:nth-of-type(11) { transition-delay: 0.55s; }
+    #cs-navigation .cs-li:nth-of-type(12) { transition-delay: 0.6s; }
+    #cs-navigation .cs-li:nth-of-type(13) { transition-delay: 0.65s; }
 
     #cs-navigation .cs-li-link {
-        /* 16px - 24px */
         font-size: clamp(1rem, 2.5vw, 1.5rem);
         line-height: 1.2em;
         text-decoration: none;
@@ -335,8 +286,8 @@
 }
 
 /*-- -------------------------- -->
-  <---     Navigation Dropdown    -->
-  <--- -------------------------- -*/
+<---     Navigation Dropdown    -->
+<--- -------------------------- -*/
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
     #cs-navigation .cs-li {
@@ -398,7 +349,6 @@
     }
 
     #cs-navigation .cs-li-link.cs-drop-link {
-        /* 14px - 16px */
         font-size: clamp(0.875rem, 2vw, 1.25rem);
         color: #fff;
     }
@@ -441,7 +391,6 @@
         border-bottom: 5px solid var(--primary);
         border-radius: 0 0 1.5rem 1.5rem;
         visibility: hidden;
-        /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
         position: absolute;
         top: 100%;
         z-index: -100;
@@ -463,41 +412,15 @@
         transition: opacity 0.6s, transform 0.6s;
     }
 
-    #cs-navigation .cs-drop-li:nth-of-type(1) {
-        transition-delay: 0.05s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(2) {
-        transition-delay: 0.1s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(3) {
-        transition-delay: 0.15s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(4) {
-        transition-delay: 0.2s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(5) {
-        transition-delay: 0.25s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(6) {
-        transition-delay: 0.3s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(7) {
-        transition-delay: 0.35s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(8) {
-        transition-delay: 0.4s;
-    }
-
-    #cs-navigation .cs-drop-li:nth-of-type(9) {
-        transition-delay: 0.45s;
-    }
+    #cs-navigation .cs-drop-li:nth-of-type(1) { transition-delay: 0.05s; }
+    #cs-navigation .cs-drop-li:nth-of-type(2) { transition-delay: 0.1s; }
+    #cs-navigation .cs-drop-li:nth-of-type(3) { transition-delay: 0.15s; }
+    #cs-navigation .cs-drop-li:nth-of-type(4) { transition-delay: 0.2s; }
+    #cs-navigation .cs-drop-li:nth-of-type(5) { transition-delay: 0.25s; }
+    #cs-navigation .cs-drop-li:nth-of-type(6) { transition-delay: 0.3s; }
+    #cs-navigation .cs-drop-li:nth-of-type(7) { transition-delay: 0.35s; }
+    #cs-navigation .cs-drop-li:nth-of-type(8) { transition-delay: 0.4s; }
+    #cs-navigation .cs-drop-li:nth-of-type(9) { transition-delay: 0.45s; }
 
     #cs-navigation .cs-li-link.cs-drop-link {
         font-size: 1rem;
@@ -506,7 +429,6 @@
         text-decoration: none;
         white-space: nowrap;
         width: 100%;
-        /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: 0.75rem;
         color: var(--headerColor);
@@ -525,8 +447,8 @@
 }
 
 /*-- -------------------------- -->
-  <---     Desktop Navigation     -->
-  <--- -------------------------- -*/
+<---     Desktop Navigation     -->
+<--- -------------------------- -*/
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     body.scroll #cs-navigation {
@@ -540,13 +462,10 @@
         width: 94%;
         max-width: 90rem;
         height: 6rem;
-        /* prevents padding from affecting height and width */
         box-sizing: border-box;
-        /* 12px - 24px */
         padding: clamp(0.75rem, 2vw, 1.5rem) 0;
         background-color: #fff;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
         display: flex;
         align-items: center;
@@ -562,7 +481,6 @@
         width: 100%;
         max-width: 90rem;
         margin: auto;
-        /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: 0 1.5rem;
         display: flex;
@@ -579,7 +497,6 @@
         width: 18.4%;
         max-width: 21.875rem;
         height: 3rem;
-        /* margin-right auto pushes everything away from it to the right */
         margin: 0 auto 0 0;
         padding: 0;
         display: flex;
@@ -591,7 +508,6 @@
     #cs-navigation .cs-logo img {
         width: auto;
         height: 100%;
-        /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
     }
 
@@ -665,11 +581,6 @@
         height: 100%;
         display: flex;
         align-items: center;
-        /* absolutely positioned to be dead center */
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
     }
 
     #cs-navigation .cs-ul {
@@ -680,7 +591,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        /* 20px - 36px */
         gap: clamp(1.25rem, 2.6vw, 2.25rem);
     }
 
@@ -690,7 +600,6 @@
         padding: 0;
         display: flex;
         align-items: center;
-        /* prevent flexbox from squishing it */
         flex: none;
     }
 
@@ -716,13 +625,11 @@
     #cs-navigation .cs-button-solid {
         font-size: 1rem;
         font-weight: 700;
-        /* 46px - 56px */
         line-height: clamp(2.875em, 5.5vw, 3.5em);
         text-align: center;
         text-decoration: none;
         min-width: 9.375rem;
         margin: 0;
-        /* prevents padding from adding to the width */
         box-sizing: border-box;
         padding: 0 2rem;
         color: #fff;
@@ -775,9 +682,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 0;
-        /* 16px - 60px */
         padding: 3.75rem clamp(1rem, 7vw, 3.75rem);
-        /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         border: 1px solid #484848;
         display: flex;
@@ -789,14 +694,11 @@
     }
 
     #cta-1185 .cs-content {
-        /* set text align to left if content needs to be left aligned */
         text-align: center;
         width: 100%;
-        /* changes to 100% at tablet */
         max-width: 25rem;
         display: flex;
         flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
         align-items: center;
         gap: 1.5rem;
     }
@@ -816,7 +718,6 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        /* prevents flexbox from squishing it */
         flex: none;
     }
 
@@ -828,7 +729,6 @@
         padding: 0;
         padding-left: 1.25rem;
         border: none;
-        /* prevents padding from adding to width and height */
         box-sizing: border-box;
         display: block;
     }
@@ -839,7 +739,6 @@
 
     #cta-1185 .cs-button-solid {
         font-size: 1rem;
-        /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
         font-weight: 700;
@@ -852,7 +751,6 @@
         display: inline-block;
         position: relative;
         z-index: 1;
-        /* prevents padding from adding to the width */
         box-sizing: border-box;
     }
 
@@ -912,7 +810,6 @@
     #cta-1185 .cs-submit {
         width: auto;
         min-width: 11.875rem;
-        /* prevents flexbox from squishing it */
         flex: none;
     }
 }
@@ -936,15 +833,12 @@
 @media only screen and (min-width: 0rem) {
     #cs-footer-1185 {
         padding: var(--sectionPadding);
-        /* 120px - 200px */
         padding-top: clamp(7.5rem, 15vw, 12.5rem);
         position: relative;
-        /* Navigation Links */
     }
 
     #cs-footer-1185 .cs-container {
         width: 100%;
-        /* reset on desktop */
         max-width: 43.75rem;
         margin: auto;
         display: flex;
@@ -955,7 +849,6 @@
     }
 
     #cs-footer-1185 .cs-logo-group {
-        /* takes up all the space, lets the other ul's wrap below it */
         width: 100%;
         position: relative;
     }
@@ -977,12 +870,10 @@
     }
 
     #cs-footer-1185 .cs-text {
-        /* 14px - 16px */
         font-size: clamp(0.875rem, 2.5vw, 1rem);
         line-height: 1.5em;
         margin: 0;
         width: 78%;
-        /* changes to 305px at desktop */
         max-width: 26.25rem;
         color: var(--bodyTextColorWhite);
     }
@@ -1027,7 +918,6 @@
     }
 
     #cs-footer-1185 .cs-nav-link:before {
-        /* underline */
         content: "";
         width: 0%;
         height: 0.125rem;
@@ -1094,24 +984,12 @@
     }
 
     #cs-footer-1185 .cs-background:before {
-        /* background color overlay */
         content: "";
         position: absolute;
         display: block;
         height: 100%;
         width: 100%;
-        background: -moz-linear-gradient(left,
-                rgba(26, 26, 26, 0.94) 0%,
-                #1a1a1a 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left,
-                rgba(26, 26, 26, 0.94) 0%,
-                #1a1a1a 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right,
-                rgba(26, 26, 26, 0.94) 0%,
-                #1a1a1a 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(to right, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
         opacity: 0.97;
         top: 0;
         left: 0;
@@ -1124,7 +1002,6 @@
         left: 0;
         height: 100%;
         width: 100%;
-        /* Makes img tag act as a background image */
         object-fit: cover;
     }
 
@@ -1160,7 +1037,6 @@
     #cs-footer-1185 .cs-container {
         max-width: 80rem;
         flex-wrap: nowrap;
-        /* align everything to the right */
         justify-content: flex-end;
         column-gap: 5.25rem;
     }
@@ -1168,7 +1044,6 @@
     #cs-footer-1185 .cs-logo-group {
         width: 30%;
         max-width: 24.1875rem;
-        /* pushes away from everything to the right */
         margin-right: auto;
     }
 
@@ -1191,7 +1066,6 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #banner-712 {
-        /* 175px - 200px top */
         padding: clamp(10.9375rem, 10vw, 12.5rem) 1rem 6.25rem;
         position: relative;
         z-index: 1;
@@ -1210,7 +1084,6 @@
     }
 
     #banner-712 .cs-int-title {
-        /* 39px - 61px */
         font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
         font-weight: 900;
         line-height: 1.2em;
@@ -1231,7 +1104,6 @@
     }
 
     #banner-712 .cs-background:before {
-        /* background color overlay */
         content: "";
         position: absolute;
         display: block;
@@ -1250,7 +1122,6 @@
         left: 0;
         height: 100%;
         width: 100%;
-        /* Makes img tag act as a background image */
         object-fit: cover;
     }
 }
@@ -1259,9 +1130,7 @@
 @media only screen and (min-width: 48rem) {
     #banner-712 .cs-background:before {
         opacity: 1;
-        background: linear-gradient(90.01deg,
-                rgba(0, 0, 0, 0.9) 16.86%,
-                rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.9) 16.86%, rgba(0, 0, 0, 0) 100%);
     }
 }
 
@@ -1277,23 +1146,19 @@
 
     #blog-985 .cs-container {
         width: 100%;
-        /* changes to 1280px at desktop */
         max-width: 36.5rem;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* 48px - 64px */
         gap: clamp(2rem, 6vw, 3rem);
     }
 
     #blog-985 .cs-content {
-        /* set text align to left if content needs to be left aligned */
         text-align: center;
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
         align-items: center;
     }
 
@@ -1302,54 +1167,12 @@
         max-width: 100%;
     }
 
-    #blog-985 .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875em, 5.5vw, 3.5em);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        color: #fff;
-        min-width: 9.375rem;
-        padding: 0 2rem;
-        background-color: var(--primary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-    }
-
-    #blog-985 .cs-button-solid:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-    }
-
-    #blog-985 .cs-button-solid:hover:before {
-        width: 100%;
-    }
-
-    #blog-985 .cs-button-solid {
-        /* prevents flexbox from squishing it */
-        flex: none;
-    }
-
     #blog-985 .cs-card-group {
         width: 100%;
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
-        /* 16px - 20px */
         gap: clamp(1rem, 2vw, 1.25rem);
         position: relative;
     }
@@ -1392,9 +1215,7 @@
     #blog-985 .cs-picture {
         width: 100%;
         height: 30rem;
-        /* removed at tablet */
         aspect-ratio: 0.68333333;
-        /* clips img tag from overflowing it on hover */
         overflow: hidden;
         display: block;
         position: relative;
@@ -1406,7 +1227,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
         object-position: top;
         position: absolute;
         top: 0;
@@ -1418,9 +1238,7 @@
     #blog-985 .cs-info {
         width: 83%;
         max-width: 26.25rem;
-        /* 16px - 24px */
         padding: clamp(1rem, 2vw, 1.5rem);
-        /* prevents padding from affecting the height and width */
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -1433,7 +1251,6 @@
     }
 
     #blog-985 .cs-info:before {
-        /* background-color */
         content: "";
         width: 100%;
         height: 100%;
@@ -1444,9 +1261,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        transition:
-            background-color 0.3s,
-            opacity 0.3s;
+        transition: background-color 0.3s, opacity 0.3s;
     }
 
     #blog-985 .cs-date {
@@ -1503,7 +1318,6 @@
     }
 
     #blog-985 .cs-link:before {
-        /* underline */
         content: "";
         width: 100%;
         height: 1px;
@@ -1532,7 +1346,6 @@
     }
 
     #blog-985 .cs-picture {
-        /* remove the aspect ratio so the height can be squished */
         aspect-ratio: initial;
     }
 }
@@ -1557,7 +1370,6 @@
     #content-page-715 {
         padding: var(--sectionPadding);
         background-color: #fff;
-        /* clips the wave background from causing overflow issues when it goes off screen */
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -1570,18 +1382,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* 48px - 64px */
         gap: clamp(3rem, 6vw, 4rem);
         position: relative;
     }
 
     #content-page-715 .cs-content {
-        /* set text align to left if content needs to be left aligned */
         text-align: left;
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
         align-items: flex-start;
     }
 
@@ -1676,7 +1485,6 @@
     }
 
     #content-page-715 ul li:before {
-        /* custom list bullet */
         content: "";
         width: 3px;
         height: 3px;
@@ -1690,16 +1498,12 @@
     }
 
     #content-page-715 .cs-image-group {
-        /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
         font-size: min(1vw, 1em);
-        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
         width: 33.875em;
         height: 48.3125em;
         display: none;
-        /* prevents flexbox from squishing it */
         flex: none;
         position: relative;
-        /* flips it horizontally */
         transform: scaleX(-1);
     }
 
@@ -1709,9 +1513,7 @@
         border-radius: 17.8125em;
         border: 0.75em solid #ffffff;
         background-color: #f7f7f7;
-        /* prevents border from affecting height and width */
         box-sizing: border-box;
-        /* clips img tag corners */
         overflow: hidden;
         display: block;
         position: absolute;
@@ -1722,12 +1524,10 @@
     #content-page-715 .cs-picture img {
         width: 100%;
         height: 100%;
-        /* makes it act like a background image */
         object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
-        /* flips the image to its original orientation */
         transform: scaleX(-1);
     }
 
@@ -1793,7 +1593,6 @@
 /* Large Desktop 1300px */
 @media only screen and (min-width: 81.25rem) {
     #content-page-715 .cs-image-group {
-        /* position absolute so we can have it overflow the container as seen in the design. */
         font-size: inherit;
         position: absolute;
         top: 0rem;
@@ -1802,10 +1601,8 @@
 
     #content-page-715 .cs-background {
         width: 50%;
-        /* with the left edge always positioned at the center line, we push left of the center line by 335px.  This ensures that this element will stay exactly in this position no matter hoe wide the screen gets */
         margin-left: 20.9375rem;
         right: auto;
-        /* sets the left edge of the element to be at the center line */
         left: 50%;
     }
 }
