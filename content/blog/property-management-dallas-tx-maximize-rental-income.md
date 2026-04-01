@@ -2,7 +2,7 @@
 title: "Why Hiring a Property Manager in Dallas, TX Can Maximize Your Rental Income in 2026"
 date: "2026-04-01"
 excerpt: "Learn how hiring a property manager in Dallas, TX can increase rental income, reduce vacancies, and simplify ownership in today’s market."
-cover_image: "/images/blog/uploads/dallas-property-management.jpg"
+cover_image: "/images/blog/uploads/dallas-property-management.webp"
 seo_title: "Dallas Property Management: Maximize Rental Income 2026"
 seo_description: "Discover how property management in Dallas, TX can boost rental income, reduce stress, and protect your investment in a competitive market."
 author_name: "Europa Luxury Properties"
