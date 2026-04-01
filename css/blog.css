@@ -1401,6 +1401,10 @@
         display: block;
     }
 
+    #content-page-715 .cs-content img.cs-icon {
+        width: 20px !important;
+    }
+
     #content-page-715 .cs-title {
         font-size: var(--headerFontSize);
         font-weight: 900;

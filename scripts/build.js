@@ -371,7 +371,7 @@ function generatePaginationHTML(currentPage, totalPages) {
 }
 
 // ─── Update blog.html between markers ────────────────────────────────────────
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 9;
 const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 const blogTemplatePath = './blog.html';
 const blogTemplate = fs.readFileSync(blogTemplatePath, 'utf8');
